@@ -48,3 +48,19 @@
 .clickable-row {
     cursor: pointer;
 }
+
+/* My Custom CSS */
+.admin-nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.admin-nav a:hover {
+    text-decoration: none;
+    color: black;
+    background-color: #eee;
+}
+
+.admin-nav .active {
+    background-color: #eee !important;
+}

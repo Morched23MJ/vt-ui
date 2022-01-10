@@ -1,0 +1,95 @@
+<%- include('../base/base-head'); -%>
+    <%- include('../../components/navbar'); -%>
+        <div class="d-noneee p-5">
+            <table class="table caption-top table-striped table-hover table-bordered border-secondary">
+                <caption>Liste des utilisateurs</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Nom d'utilisateur</th>
+                        <th scope="col">Date d'inscription</th>
+                        <th scope="col">Activation</th>
+                        <th scope="col">Premium</th>
+                        <th scope="col">Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="clickable-row" onclick="window.location='/admin/users/122';">
+                        <th scope="row">1</th>
+                        <td>sofi.den@gmail.com</td>
+                        <td>Sofiane Dennah</td>
+                        <td>02 Fevrier, 2018</td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                aria-hidden="true" role="img" class="iconify iconify--icons8" width="32" height="32"
+                                preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">
+                                <path
+                                    d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13s13-5.8 13-13c0-1.4-.188-2.794-.688-4.094L26.688 13.5c.2.8.313 1.6.313 2.5c0 6.1-4.9 11-11 11S5 22.1 5 16S9.9 5 16 5c3 0 5.694 1.194 7.594 3.094L25 6.688C22.7 4.388 19.5 3 16 3zm11.28 4.28L16 18.563l-4.28-4.28l-1.44 1.437l5 5l.72.686l.72-.687l12-12l-1.44-1.44z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                aria-hidden="true" role="img" class="iconify iconify--radix-icons" width="32"
+                                height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 15 15">
+                                <g fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M.877 7.5a6.623 6.623 0 1 1 13.246 0a6.623 6.623 0 0 1-13.246 0zM7.5 1.827a5.673 5.673 0 1 0 0 11.346a5.673 5.673 0 0 0 0-11.346zm2.354 3.32a.5.5 0 0 1 0 .707L8.207 7.5l1.647 1.646a.5.5 0 0 1-.708.708L7.5 8.207L5.854 9.854a.5.5 0 0 1-.708-.708L6.793 7.5L5.146 5.854a.5.5 0 0 1 .708-.708L7.5 6.793l1.646-1.647a.5.5 0 0 1 .708 0z"
+                                        fill="currentColor"></path>
+                                </g>
+                            </svg>
+                        </td>
+                        <td>Administrateur</td>
+                    </tr>
+                    <tr class="clickable-row" onclick="window.location='####';">
+                        <th scope="row">2</th>
+                        <td>jums@gmail.com</td>
+                        <td>Djamel Dafi</td>
+                        <td>29 Decembre, 2019</td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                aria-hidden="true" role="img" class="iconify iconify--radix-icons" width="32"
+                                height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 15 15">
+                                <g fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M.877 7.5a6.623 6.623 0 1 1 13.246 0a6.623 6.623 0 0 1-13.246 0zM7.5 1.827a5.673 5.673 0 1 0 0 11.346a5.673 5.673 0 0 0 0-11.346zm2.354 3.32a.5.5 0 0 1 0 .707L8.207 7.5l1.647 1.646a.5.5 0 0 1-.708.708L7.5 8.207L5.854 9.854a.5.5 0 0 1-.708-.708L6.793 7.5L5.146 5.854a.5.5 0 0 1 .708-.708L7.5 6.793l1.646-1.647a.5.5 0 0 1 .708 0z"
+                                        fill="currentColor"></path>
+                                </g>
+                            </svg>
+                        </td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                aria-hidden="true" role="img" class="iconify iconify--radix-icons" width="32"
+                                height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 15 15">
+                                <g fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M.877 7.5a6.623 6.623 0 1 1 13.246 0a6.623 6.623 0 0 1-13.246 0zM7.5 1.827a5.673 5.673 0 1 0 0 11.346a5.673 5.673 0 0 0 0-11.346zm2.354 3.32a.5.5 0 0 1 0 .707L8.207 7.5l1.647 1.646a.5.5 0 0 1-.708.708L7.5 8.207L5.854 9.854a.5.5 0 0 1-.708-.708L6.793 7.5L5.146 5.854a.5.5 0 0 1 .708-.708L7.5 6.793l1.646-1.647a.5.5 0 0 1 .708 0z"
+                                        fill="currentColor"></path>
+                                </g>
+                            </svg>
+                        </td>
+                        <td>Moderateur</td>
+                    </tr>
+                    <tr class="clickable-row" onclick="window.location='##';">
+                        <th scope="row">3</th>
+                        <td>moh22@gmail.com</td>
+                        <td>Mohammed Attal</td>
+                        <td>22 Octobre, 2021</td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                aria-hidden="true" role="img" class="iconify iconify--icons8" width="32" height="32"
+                                preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">
+                                <path
+                                    d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13s13-5.8 13-13c0-1.4-.188-2.794-.688-4.094L26.688 13.5c.2.8.313 1.6.313 2.5c0 6.1-4.9 11-11 11S5 22.1 5 16S9.9 5 16 5c3 0 5.694 1.194 7.594 3.094L25 6.688C22.7 4.388 19.5 3 16 3zm11.28 4.28L16 18.563l-4.28-4.28l-1.44 1.437l5 5l.72.686l.72-.687l12-12l-1.44-1.44z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </td>
+                        <td>Jusqu'au 03 Mars, 2022</td>
+                        <td>Utilisateur</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <%- include('../../components/footer'); -%>
+            <%- include('../base/base-tail'); -%>
