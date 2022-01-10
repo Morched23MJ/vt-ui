@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAUTOOR</title>
+    <link href="http://localhost:3000/assets/css/custom-utils.css" rel="stylesheet" />
+    <link href="http://localhost:3000/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="http://localhost:3000/assets/js/bootstrap.min.js"></script>
+    <!-- TODO: Remove masonry effect after reviewing with Ghazzel -->
+    <!-- MASONRY -->
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+        async></script>
+</head>
+
+<body>
+    <!-- ENHANCEMENT: Deposer Annonce btn should be outside the menu -->
+    <nav class="navbar navbar-expand-lg px-md-5 navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-3" href="#">
+                <span class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        aria-hidden="true" role="img" class="iconify iconify--mdi" width="32" height="32"
+                        preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                        <path
+                            d="M6 11l1-4h10l1 4m.92-5c-.21-.6-.78-1-1.42-1h-11c-.64 0-1.21.4-1.42 1L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2h12v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.08-6M7 16H5v-2h2v2m12 0h-2v-2h2v2m-5 0h-4v-2h4v2z"
+                            fill="currentColor"></path>
+                    </svg>
+                </span>
+                <span class="ps-1 align-text-baseline">Vautoor</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                menu <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    aria-hidden="true" role="img" class="iconify iconify--ci" width="32" height="32"
+                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                    <g fill="none">
+                        <path d="M21 16H3v-2h18v2zm0-6H3V8h18v2z" fill="currentColor"></path>
+                    </g>
+                </svg>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <button class="btn btn-danger me-3 ms-auto mt-3 mt-lg-0">Deposer une annonce</button>
+                <ul class="navbar-nav me-0 my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 200px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Annonces</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link</a>
+                    </li>
+                    <li class="nav-item dropdown d-flex">
+                        <div>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                A. Mohammed
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item" href="#">Mes Annonces</a></li>
+                                <li><a class="dropdown-item" href="#">Mon Profil</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Se deconnecter</a></li>
+                            </ul>
+                        </div>
+                        <img style="max-height: 40px" class="ms-3 rounded w-auto obj-fit-cover"
+                            src="https://lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <!-- TODO: add illustrations to auth screens col-0 on small screen -->
+    <div class="reset-password d-none shadow rounded my-5 p-5 container col-12 col-sm-10 col-md-8 col-lg-6">
+        <div class="mb-4">
+            <a class="navbar-brand fs-3" href="#">
+                <img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="37"
+                    height="30" class="d-inline-block align-text-bottom">
+                Vautoor
+            </a>
+        </div>
+        <p class="lead">
+            Réinitialiser mot de passe
+        </p>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+            </symbol>
+            <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+            </symbol>
+            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                    d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </symbol>
+        </svg>
+        <div class="alert alert-success d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+                <use xlink:href="#check-circle-fill" />
+            </svg>
+            <div>
+                Mot de passe réinitialisé avec succès
+            </div>
+        </div>
+        <div class="alert alert-danger d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
+                <use xlink:href="#exclamation-triangle-fill" />
+            </svg>
+            <div>
+                Une erreur s'est produite. Veuillez réessayer
+            </div>
+        </div>
+        <form class="row g-3">
+            <h5>
+                <span class="badge bg-primary">example@gmail.com / example66</span>
+            </h5>
+            <div class="">
+                <label for="passwordInput" class="form-label">Mot de passe</label>
+                <input placeholder="Entrez votre mot de passe" type="password" class="form-control" id="passwordInput">
+                <span class="d-inline-block alert alert-danger py-1 fs-7 fw-bold my-0 mt-1" role="alert">
+                    Mot de passe trop court
+                </span>
+                <span class="d-inline-block alert alert-danger py-1 fs-7 fw-bold my-0 mt-1" role="alert">
+                    Mot de passe doit contenir un caractere special
+                </span>
+            </div>
+            <div class="">
+                <label for="confirmPasswordInput" class="form-label">Confirmer mot de passe</label>
+                <input placeholder="Confirmez votre mot de passe" type="password" class="form-control"
+                    id="confirmPasswordInput">
+                <span class="d-inline-block alert alert-danger py-1 fs-7 fw-bold my-0 mt-1" role="alert">
+                    Mot de passe non conforme
+                </span>
+            </div>
+            <div class="d-flex mt-5 justify-content-between">
+                <span>
+                    <a href="#" class="pt-2">S'inscrire</a> ou <a href="#" class="pt-2">Se connecter</a>
+                </span>
+                <button type="submit" class="btn btn-primary ms-3">Valider</button>
+            </div>
+        </form>
+    </div>
+    <div class="resend-link d-none shadow rounded my-5 p-5 container col-12 col-sm-10 col-md-8 col-lg-6">
+        <div class="mb-4">
+            <a class="navbar-brand fs-3" href="#">
+                <img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="37"
+                    height="30" class="d-inline-block align-text-bottom">
+                Vautoor
+            </a>
+        </div>
+        <p class="lead">
+            Envoyer lien de réinitialisation via email
+        </p>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+            </symbol>
+            <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+            </symbol>
+            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                    d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </symbol>
+        </svg>
+        <div class="alert alert-success d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+                <use xlink:href="#check-circle-fill" />
+            </svg>
+            <div>
+                Envoie avec succès. Consultez votre email.
+            </div>
+        </div>
+        <div class="alert alert-danger d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
+                <use xlink:href="#exclamation-triangle-fill" />
+            </svg>
+            <div>
+                Une erreur s'est produite. Veuillez réessayer
+            </div>
+        </div>
+        <form class="row g-3">
+            <div class="">
+                <label for="emailInput" class="form-label">Email/Nom d'utilisateur</label>
+                <input placeholder="Entrez votre email/nom d'utilisateur" type="email" class="form-control"
+                    id="emailInput">
+                <span class="d-inline-block alert alert-danger py-1 fs-7 fw-bold mt-1" role="alert">
+                    Email/Nom d'utilisateur invalide
+                </span>
+            </div>
+            <a href="#" class="pt-2">Réenvoyer le lien d'activation</a>
+
+            <div class="d-flex mt-5 justify-content-between">
+                <span>
+                    <a href="#" class="pt-2">S'inscrire</a> ou <a href="#" class="pt-2">Se connecter</a>
+                </span>
+                <button type="submit" class="btn btn-primary ms-3">Valider</button>
+            </div>
+        </form>
+    </div>
+    <div class="forgot-password d-none shadow rounded my-5 p-5 container col-12 col-sm-10 col-md-8 col-lg-6">
+        <div class="mb-4">
+            <a class="navbar-brand fs-3" href="#">
+                <img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="37"
+                    height="30" class="d-inline-block align-text-bottom">
+                Vautoor
+            </a>
+        </div>
+        <p class="lead">
+            Mot de passe oublié
+        </p>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+            </symbol>
+            <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+            </symbol>
+            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                    d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </symbol>
+        </svg>
+        <div class="alert alert-success d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+                <use xlink:href="#check-circle-fill" />
+            </svg>
+            <div>
+                Envoie avec succès. Consultez votre email.
+            </div>
+        </div>
+        <div class="alert alert-danger d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
+                <use xlink:href="#exclamation-triangle-fill" />
+            </svg>
+            <div>
+                Une erreur s'est produite. Veuillez réessayer
+            </div>
+        </div>
+        <form class="row g-3">
+            <div class="">
+                <label for="emailInput" class="form-label">Email/Nom d'utilisateur</label>
+                <input placeholder="Entrez votre email/nom d'utilisateur" type="email" class="form-control"
+                    id="emailInput">
+                <span class="d-inline-block alert alert-danger py-1 fs-7 fw-bold mt-1" role="alert">
+                    Email/Nom d'utilisateur invalide
+                </span>
+            </div>
+
+            <div class="d-flex mt-5 justify-content-between">
+                <span>
+                    <a href="#" class="pt-2">S'inscrire</a> ou <a href="#" class="pt-2">Se connecter</a>
+                </span>
+                <button type="submit" class="btn btn-primary ms-3">Valider</button>
+            </div>
+        </form>
+    </div>
+    <div class="login d-none shadow rounded my-5 p-5 container col-12 col-sm-10 col-md-8 col-lg-6">
+        <div class="mb-4">
+            <a class="navbar-brand fs-3" href="#">
+                <img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="37"
+                    height="30" class="d-inline-block align-text-bottom">
+                Vautoor
+            </a>
+        </div>
+        <p class="lead">
+            Connectez-vous
+        </p>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+            </symbol>
+            <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+            </symbol>
+            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                    d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </symbol>
+        </svg>
+        <div class="alert alert-success d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+                <use xlink:href="#check-circle-fill" />
+            </svg>
+            <div>
+                Vous vous êtes connecté avec succès.
+            </div>
+        </div>
+        <div class="alert alert-danger d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
+                <use xlink:href="#exclamation-triangle-fill" />
+            </svg>
+            <div>
+                Une erreur s'est produite. Veuillez réessayer
+            </div>
+        </div>
+        <form class="row g-3">
+            <div class="">
+                <label for="emailInput" class="form-label">Email/Nom d'utilisateur</label>
+                <input placeholder="Entrez votre email/nom d'utilisateur" type="email" class="form-control"
+                    id="emailInput">
+                <span class="d-inline-block alert alert-danger py-1 fs-7 fw-bold mt-1" role="alert">
+                    Email/Nom d'utilisateur invalide
+                </span>
+            </div>
+            <div class="">
+                <div>
+                    <label for="passwordInput" class="float-start form-label">Mot de passe</label>
+                    <a href="#" class="float-end">Mot de passe oublié?</a>
+                </div>
+                <input placeholder="Entrez votre mot de passe" type="password" class="form-control" id="passwordInput">
+                <span class="d-inline-block alert alert-danger py-1 fs-7 fw-bold mt-1" role="alert">
+                    Mot de passe errone
+                </span>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        Se souvenir de moi
+                    </label>
+                </div>
+            </div>
+
+            <div class="d-flex mt-5 justify-content-between">
+                <a href="#" class="pt-2">Pas de compte? Inscrivez-vous.</a>
+                <button type="submit" class="btn btn-primary ms-3">Se connecter</button>
+            </div>
+        </form>
+        <div class="social-login mt-5">
+            <button class="btn btn-danger mb-1 col-12">
+                <svg class="align-text-top" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                    class="iconify iconify--mdi" width="17" height="17" preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 24 24">
+                    <path
+                        d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27c3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10c5.35 0 9.25-3.67 9.25-9.09c0-1.15-.15-1.81-.15-1.81z"
+                        fill="currentColor"></path>
+                </svg>
+                <span class="ps-1">
+                    Se connecter avec Google
+                </span>
+            </button>
+            <br />
+            <button class="btn btn-primary col-12">
+                <svg class="align-text-top" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--la"
+                    width="17" height="17" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">
+                    <path
+                        d="M19.254 2C15.312 2 13 4.082 13 8.826V13H8v5h5v12h5V18h4l1-5h-5V9.672C18 7.885 18.583 7 20.26 7H23V2.205C22.526 2.141 21.145 2 19.254 2z"
+                        fill="currentColor"></path>
+                </svg>
+                <span class="ps-1">
+                    Se connecter avec Facebook
+                </span>
+            </button>
+        </div>
+    </div>
+    <div class="signup d-none shadow rounded my-5 p-5 container col-12 col-sm-10 col-md-8 col-lg-6">
+        <div class="mb-4">
+            <a class="navbar-brand fs-3" href="#">
+                <img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="37"
+                    height="30" class="d-inline-block align-text-bottom">
+                Vautoor
+            </a>
+        </div>
+        <p class="lead">
+            Inscrivez-vous
+        </p>
+        <form class="row g-3">
+            <div class="">
+                <label for="fullnameInput" class="form-label">Nom et prénom</label>
+                <input placeholder="Entrez votre nom et prénom" type="text" class="form-control" id="fullnameInput">
+                <span class="d-inline-block alert alert-danger py-1 fs-7 fw-bold mt-1" role="alert">
+                    Nom et prenom non valides
+                </span>
+            </div>
+            <div class="">
+                <label for="usernameInput" class="form-label">Nom d'utilisateur</label>
+                <input placeholder="Entrez votre nom d'utilisateur" type="text" class="form-control" id="usernameInput">
+                <span class="d-inline-block alert alert-danger py-1 fs-7 fw-bold mt-1" role="alert">
+                    Nom d'utilisateur déjà utilisé
+                </span>
+            </div>
+            <div class="">
+                <label for="emailInput" class="form-label">Email</label>
+                <input placeholder="Entrez votre email" type="email" class="form-control" id="emailInput">
+                <span class="d-inline-block alert alert-danger py-1 fs-7 fw-bold my-0 mt-1" role="alert">
+                    Email invalide
+                </span>
+            </div>
+            <div class="">
+                <label for="passwordInput" class="form-label">Mot de passe</label>
+                <input placeholder="Entrez votre mot de passe" type="password" class="form-control" id="passwordInput">
+                <span class="d-inline-block alert alert-danger py-1 fs-7 fw-bold my-0 mt-1" role="alert">
+                    Mot de passe trop court
+                </span>
+                <span class="d-inline-block alert alert-danger py-1 fs-7 fw-bold my-0 mt-1" role="alert">
+                    Mot de passe doit contenir un caractere special
+                </span>
+            </div>
+            <div class="">
+                <label for="confirmPasswordInput" class="form-label">Confirmer mot de passe</label>
+                <input placeholder="Confirmez votre mot de passe" type="password" class="form-control"
+                    id="confirmPasswordInput">
+                <span class="d-inline-block alert alert-danger py-1 fs-7 fw-bold my-0 mt-1" role="alert">
+                    Mot de passe non conforme
+                </span>
+            </div>
+            <div class="d-flex mt-5 justify-content-between">
+                <a href="#" class="pt-2">Vous avez un compte? Connectez-vous.</a>
+                <button type="submit" class="btn btn-primary ms-3">S'inscrire</button>
+            </div>
+        </form>
+
+        <div class="social-signup mt-5">
+            <button class="btn btn-danger mb-1 col-12">
+                <svg class="align-text-top" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                    class="iconify iconify--mdi" width="17" height="17" preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 24 24">
+                    <path
+                        d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27c3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10c5.35 0 9.25-3.67 9.25-9.09c0-1.15-.15-1.81-.15-1.81z"
+                        fill="currentColor"></path>
+                </svg>
+                <span class="ps-1">
+                    S'inscrire avec Google
+                </span>
+            </button>
+            <br />
+            <button class="btn btn-primary col-12">
+                <svg class="align-text-top" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--la"
+                    width="17" height="17" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">
+                    <path
+                        d="M19.254 2C15.312 2 13 4.082 13 8.826V13H8v5h5v12h5V18h4l1-5h-5V9.672C18 7.885 18.583 7 20.26 7H23V2.205C22.526 2.141 21.145 2 19.254 2z"
+                        fill="currentColor"></path>
+                </svg>
+                <span class="ps-1">
+                    S'inscrire avec Facebook
+                </span>
+            </button>
+        </div>
+    </div>
+
+    <!-- TODO: Make Profile pages -->
+
+    <!-- TODO: Finish About page -->
+    <div class="d-none about">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://via.placeholder.com/150" class="d-block w-100 h-100 obj-fit-cover" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/150" class="d-block w-100 h-100 obj-fit-cover" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/150" class="d-block w-100 h-100 obj-fit-cover" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- TODO: Finish Table structure -->
+    <div class="d-none p-5">
+        <table class="table caption-top table-striped table-hover table-bordered border-secondary">
+            <caption>Liste des utilisateurs</caption>
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Nom d'utilisateur</th>
+                    <th scope="col">Date d'inscription</th>
+                    <th scope="col">Premium</th>
+                    <th scope="col">Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="clickable-row" onclick="window.location='./user/122';">
+                    <th scope="row">1</th>
+                    <td>sofi.den@gmail.com</td>
+                    <td>Sofiane Dennah</td>
+                    <td>02 Fevrier, 2018</td>
+                    <td>Non</td>
+                    <td>Administrateur</td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='####';">
+                    <th scope="row">2</th>
+                    <td>jums@gmail.com</td>
+                    <td>Djamel Dafi</td>
+                    <td>29 Decembre, 2019</td>
+                    <td>Non</td>
+                    <td>Moderateur</td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='##';">
+                    <th scope="row">3</th>
+                    <td>moh22@gmail.com</td>
+                    <td>Mohammed Attal</td>
+                    <td>22 Octobre, 2021</td>
+                    <td>Jusqu'au 03 Mars, 2022</td>
+                    <td>Utilisateur</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- The desired model to show Ads. Cards, one under the other, just like leboncoin.com -->
+    <!-- Added pagination -->
+    <div class="ads d-neone p-md-5 p-3 m-0 row">
+        <div class="content">
+            <div class="card col col-12 col-md-11 col-lg-8 m-0 mb-3 p-0" style="">
+                <div class="row g-0">
+                    <div class="col-12 col-md-4" style="max-height: 300px;">
+                        <img src="https://via.placeholder.com/150"
+                            class="img-fluid w-100 h-100 obj-fit-cover rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body h-100">
+                            <div class="d-flex flex-column h-100 justify-content-between">
+                                <div class="top-content">
+                                    <h5 class="card-title">Ibiza FR</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to
+                                        additional content. This content is a little bit longer.</p>
+                                    <div class="details">
+                                        <span class="badge mb-1 rounded-pill bg-semilight fs-7 text-dark">2017</span>
+                                        <span class="badge mb-1 rounded-pill bg-semilight fs-7 text-dark">103.000
+                                            KM</span>
+                                        <span class="badge mb-1 rounded-pill bg-semilight fs-7 text-dark">Essence</span>
+                                        <span class="badge mb-1 rounded-pill bg-semilight fs-7 text-dark">B.V.
+                                            Manuelle</span>
+                                    </div>
+                                </div>
+                                <div class="bottom-content d-flex justify-content-between mt-5">
+                                    <p class="card-text"><small class="text-muted">7h</small></p>
+                                    <button class="btn p-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--ic" width="28" height="28"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                            <path
+                                                d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3l7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--mdi" width="28" height="28"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                            <path d="M17 3H7a2 2 0 0 0-2 2v16l7-3l7 3V5a2 2 0 0 0-2-2z"
+                                                fill="currentColor">
+                                            </path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--flat-color-icons" width="28" height="28"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48">
+                                            <path fill="#F44336"
+                                                d="M34 9c-4.2 0-7.9 2.1-10 5.4C21.9 11.1 18.2 9 14 9C7.4 9 2 14.4 2 21c0 11.9 22 24 22 24s22-12 22-24c0-6.6-5.4-12-12-12z">
+                                            </path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--icon-park-outline" width="28" height="28"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48">
+                                            <path
+                                                d="M15 8C8.925 8 4 12.925 4 19c0 11 13 21 20 23.326C31 40 44 30 44 19c0-6.075-4.925-11-11-11c-3.72 0-7.01 1.847-9 4.674A10.987 10.987 0 0 0 15 8z"
+                                                stroke="currentColor" stroke-width="4" stroke-linecap="round"
+                                                stroke-linejoin="round" fill="none"></path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--whh" width="28" height="27"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 960">
+                                            <path
+                                                d="M928 960H576l-64-64H320v64H0V384h320v64h64l96-96L640 0h192v160l-64 96v64h160l96 64v512zM256 448H64v448h192V448zm704-21l-64-43H704V224l64-96V64h-79L544 384L416 512h-96v320h224l64 64h288l64-43V427z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--fontisto" width="29" height="28"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 27 24">
+                                            <path
+                                                d="M1.547 24a.33.33 0 0 1-.327-.295v-.001L0 11.336l-.001-.031c0-.182.147-.329.329-.329h8.233v13.025zm3.36-3.265v.001a1.301 1.301 0 1 0 1.301-1.301h-.002c-.719 0-1.301.582-1.302 1.301zm.48-8c0 .181.147.328.329.328h.764a.328.328 0 0 0 0-.656h-.77a.329.329 0 0 0-.329.329v.003zm-3.61 0c0 .181.147.328.328.328H4.61a.328.328 0 0 0 0-.656H2.099a.328.328 0 0 0-.328.328v.003zm9.8 9.388a1.886 1.886 0 0 1-.494-.253l.006.004l-.1-.063a20.97 20.97 0 0 1-.69-.452l-.101-.071c-.132-.095-.194-.137-.262-.133c-.24.005-.48.007-.72.01V12.01l-.013-.77c.451-.287.867-.56.992-.664c.17-.342.338-.628.524-.902l-.017.027c.085-.133.17-.265.248-.396l1.724-2.894c.08-.136.167-.272.254-.408c.145-.216.299-.474.44-.74l.024-.049a.879.879 0 0 0 .079-.521l.001.005l-.006-3.12c.063-.454.319-.838.68-1.072l.006-.004a1.97 1.97 0 0 1 1.162-.5h.007l.063-.001c.341 0 .663.081.949.224l-.012-.006c.191.092.354.19.507.3l-.01-.007l.106.07c.241.127.421.341.501.6l.002.007c.187.696.358 1.329.517 1.964l.066.259c.101.34.188.751.244 1.172l.005.042c-.171 1.574-.5 3.01-.976 4.378l.042-.138l7.693-.011h.028a1.643 1.643 0 0 1 1.63 1.848l.001-.008a1.982 1.982 0 0 1-.894 1.781l-.008.005a2.171 2.171 0 0 1 .372 1.4v-.007a1.848 1.848 0 0 1-1.137 1.873l-.012.004a2.375 2.375 0 0 1 .299 1.31v-.006a1.905 1.905 0 0 1-.886 1.733l-.008.005a2.791 2.791 0 0 1 .224 1.459l.001-.013v.188a1.834 1.834 0 0 1-2.007 1.719l.007.001h-4.429l-.015.001l-.016-.001h.001h-5.91c-.051 0-.104 0-.16.008c-.068.004-.14.01-.214.01h-.015a1.13 1.13 0 0 1-.299-.04l.008.002zm-6.015-1.387a.64.64 0 1 1 1.281.001a.64.64 0 0 1-1.281-.001z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card col col-12 col-md-11 col-lg-8 m-0 mb-3 p-0" style="">
+                <div class="row g-0">
+                    <div class="col-12 col-md-4" style="max-height: 300px;">
+                        <img src="https://via.placeholder.com/150"
+                            class="img-fluid w-100 h-100 obj-fit-cover rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body h-100">
+                            <div class="d-flex flex-column h-100 justify-content-between">
+                                <div class="top-content">
+                                    <h5 class="card-title">Ibiza FR</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to
+                                        additional content. This content is a little bit longer.</p>
+                                    <div class="details">
+                                        <span class="badge mb-1 rounded-pill bg-semilight fs-7 text-dark">2017</span>
+                                        <span class="badge mb-1 rounded-pill bg-semilight fs-7 text-dark">103.000
+                                            KM</span>
+                                        <span class="badge mb-1 rounded-pill bg-semilight fs-7 text-dark">Essence</span>
+                                        <span class="badge mb-1 rounded-pill bg-semilight fs-7 text-dark">B.V.
+                                            Manuelle</span>
+                                    </div>
+                                </div>
+                                <div class="bottom-content d-flex justify-content-between mt-5">
+                                    <p class="card-text"><small class="text-muted">7h</small></p>
+                                    <button class="btn p-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--ic" width="28" height="28"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                            <path
+                                                d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3l7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--mdi" width="28" height="28"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                            <path d="M17 3H7a2 2 0 0 0-2 2v16l7-3l7 3V5a2 2 0 0 0-2-2z"
+                                                fill="currentColor">
+                                            </path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--flat-color-icons" width="28" height="28"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48">
+                                            <path fill="#F44336"
+                                                d="M34 9c-4.2 0-7.9 2.1-10 5.4C21.9 11.1 18.2 9 14 9C7.4 9 2 14.4 2 21c0 11.9 22 24 22 24s22-12 22-24c0-6.6-5.4-12-12-12z">
+                                            </path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--icon-park-outline" width="28" height="28"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48">
+                                            <path
+                                                d="M15 8C8.925 8 4 12.925 4 19c0 11 13 21 20 23.326C31 40 44 30 44 19c0-6.075-4.925-11-11-11c-3.72 0-7.01 1.847-9 4.674A10.987 10.987 0 0 0 15 8z"
+                                                stroke="currentColor" stroke-width="4" stroke-linecap="round"
+                                                stroke-linejoin="round" fill="none"></path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--whh" width="28" height="27"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 960">
+                                            <path
+                                                d="M928 960H576l-64-64H320v64H0V384h320v64h64l96-96L640 0h192v160l-64 96v64h160l96 64v512zM256 448H64v448h192V448zm704-21l-64-43H704V224l64-96V64h-79L544 384L416 512h-96v320h224l64 64h288l64-43V427z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--fontisto" width="29" height="28"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 27 24">
+                                            <path
+                                                d="M1.547 24a.33.33 0 0 1-.327-.295v-.001L0 11.336l-.001-.031c0-.182.147-.329.329-.329h8.233v13.025zm3.36-3.265v.001a1.301 1.301 0 1 0 1.301-1.301h-.002c-.719 0-1.301.582-1.302 1.301zm.48-8c0 .181.147.328.329.328h.764a.328.328 0 0 0 0-.656h-.77a.329.329 0 0 0-.329.329v.003zm-3.61 0c0 .181.147.328.328.328H4.61a.328.328 0 0 0 0-.656H2.099a.328.328 0 0 0-.328.328v.003zm9.8 9.388a1.886 1.886 0 0 1-.494-.253l.006.004l-.1-.063a20.97 20.97 0 0 1-.69-.452l-.101-.071c-.132-.095-.194-.137-.262-.133c-.24.005-.48.007-.72.01V12.01l-.013-.77c.451-.287.867-.56.992-.664c.17-.342.338-.628.524-.902l-.017.027c.085-.133.17-.265.248-.396l1.724-2.894c.08-.136.167-.272.254-.408c.145-.216.299-.474.44-.74l.024-.049a.879.879 0 0 0 .079-.521l.001.005l-.006-3.12c.063-.454.319-.838.68-1.072l.006-.004a1.97 1.97 0 0 1 1.162-.5h.007l.063-.001c.341 0 .663.081.949.224l-.012-.006c.191.092.354.19.507.3l-.01-.007l.106.07c.241.127.421.341.501.6l.002.007c.187.696.358 1.329.517 1.964l.066.259c.101.34.188.751.244 1.172l.005.042c-.171 1.574-.5 3.01-.976 4.378l.042-.138l7.693-.011h.028a1.643 1.643 0 0 1 1.63 1.848l.001-.008a1.982 1.982 0 0 1-.894 1.781l-.008.005a2.171 2.171 0 0 1 .372 1.4v-.007a1.848 1.848 0 0 1-1.137 1.873l-.012.004a2.375 2.375 0 0 1 .299 1.31v-.006a1.905 1.905 0 0 1-.886 1.733l-.008.005a2.791 2.791 0 0 1 .224 1.459l.001-.013v.188a1.834 1.834 0 0 1-2.007 1.719l.007.001h-4.429l-.015.001l-.016-.001h.001h-5.91c-.051 0-.104 0-.16.008c-.068.004-.14.01-.214.01h-.015a1.13 1.13 0 0 1-.299-.04l.008.002zm-6.015-1.387a.64.64 0 1 1 1.281.001a.64.64 0 0 1-1.281-.001z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card col col-12 col-md-11 col-lg-8 m-0 mb-3 p-0" style="">
+                <div class="row g-0">
+                    <div class="col-12 col-md-4" style="max-height: 300px;">
+                        <img src="https://via.placeholder.com/150"
+                            class="img-fluid w-100 h-100 obj-fit-cover rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body h-100">
+                            <div class="d-flex flex-column h-100 justify-content-between">
+                                <div class="top-content">
+                                    <h5 class="card-title">Ibiza FR</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to
+                                        additional content. This content is a little bit longer.</p>
+                                    <div class="details">
+                                        <span class="badge mb-1 rounded-pill bg-semilight fs-7 text-dark">2017</span>
+                                        <span class="badge mb-1 rounded-pill bg-semilight fs-7 text-dark">103.000
+                                            KM</span>
+                                        <span class="badge mb-1 rounded-pill bg-semilight fs-7 text-dark">Essence</span>
+                                        <span class="badge mb-1 rounded-pill bg-semilight fs-7 text-dark">B.V.
+                                            Manuelle</span>
+                                    </div>
+                                </div>
+                                <div class="bottom-content d-flex justify-content-between mt-5">
+                                    <p class="card-text"><small class="text-muted">7h</small></p>
+                                    <button class="btn p-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--ic" width="28" height="28"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                            <path
+                                                d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3l7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--mdi" width="28" height="28"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                            <path d="M17 3H7a2 2 0 0 0-2 2v16l7-3l7 3V5a2 2 0 0 0-2-2z"
+                                                fill="currentColor">
+                                            </path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--flat-color-icons" width="28" height="28"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48">
+                                            <path fill="#F44336"
+                                                d="M34 9c-4.2 0-7.9 2.1-10 5.4C21.9 11.1 18.2 9 14 9C7.4 9 2 14.4 2 21c0 11.9 22 24 22 24s22-12 22-24c0-6.6-5.4-12-12-12z">
+                                            </path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--icon-park-outline" width="28" height="28"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48">
+                                            <path
+                                                d="M15 8C8.925 8 4 12.925 4 19c0 11 13 21 20 23.326C31 40 44 30 44 19c0-6.075-4.925-11-11-11c-3.72 0-7.01 1.847-9 4.674A10.987 10.987 0 0 0 15 8z"
+                                                stroke="currentColor" stroke-width="4" stroke-linecap="round"
+                                                stroke-linejoin="round" fill="none"></path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--whh" width="28" height="27"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 960">
+                                            <path
+                                                d="M928 960H576l-64-64H320v64H0V384h320v64h64l96-96L640 0h192v160l-64 96v64h160l96 64v512zM256 448H64v448h192V448zm704-21l-64-43H704V224l64-96V64h-79L544 384L416 512h-96v320h224l64 64h288l64-43V427z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--fontisto" width="29" height="28"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 27 24">
+                                            <path
+                                                d="M1.547 24a.33.33 0 0 1-.327-.295v-.001L0 11.336l-.001-.031c0-.182.147-.329.329-.329h8.233v13.025zm3.36-3.265v.001a1.301 1.301 0 1 0 1.301-1.301h-.002c-.719 0-1.301.582-1.302 1.301zm.48-8c0 .181.147.328.329.328h.764a.328.328 0 0 0 0-.656h-.77a.329.329 0 0 0-.329.329v.003zm-3.61 0c0 .181.147.328.328.328H4.61a.328.328 0 0 0 0-.656H2.099a.328.328 0 0 0-.328.328v.003zm9.8 9.388a1.886 1.886 0 0 1-.494-.253l.006.004l-.1-.063a20.97 20.97 0 0 1-.69-.452l-.101-.071c-.132-.095-.194-.137-.262-.133c-.24.005-.48.007-.72.01V12.01l-.013-.77c.451-.287.867-.56.992-.664c.17-.342.338-.628.524-.902l-.017.027c.085-.133.17-.265.248-.396l1.724-2.894c.08-.136.167-.272.254-.408c.145-.216.299-.474.44-.74l.024-.049a.879.879 0 0 0 .079-.521l.001.005l-.006-3.12c.063-.454.319-.838.68-1.072l.006-.004a1.97 1.97 0 0 1 1.162-.5h.007l.063-.001c.341 0 .663.081.949.224l-.012-.006c.191.092.354.19.507.3l-.01-.007l.106.07c.241.127.421.341.501.6l.002.007c.187.696.358 1.329.517 1.964l.066.259c.101.34.188.751.244 1.172l.005.042c-.171 1.574-.5 3.01-.976 4.378l.042-.138l7.693-.011h.028a1.643 1.643 0 0 1 1.63 1.848l.001-.008a1.982 1.982 0 0 1-.894 1.781l-.008.005a2.171 2.171 0 0 1 .372 1.4v-.007a1.848 1.848 0 0 1-1.137 1.873l-.012.004a2.375 2.375 0 0 1 .299 1.31v-.006a1.905 1.905 0 0 1-.886 1.733l-.008.005a2.791 2.791 0 0 1 .224 1.459l.001-.013v.188a1.834 1.834 0 0 1-2.007 1.719l.007.001h-4.429l-.015.001l-.016-.001h.001h-5.91c-.051 0-.104 0-.16.008c-.068.004-.14.01-.214.01h-.015a1.13 1.13 0 0 1-.299-.04l.008.002zm-6.015-1.387a.64.64 0 1 1 1.281.001a.64.64 0 0 1-1.281-.001z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card col col-12 col-md-11 col-lg-8 m-0 mb-3 p-0" style="">
+                <div class="row g-0">
+                    <div class="col-12 col-md-4" style="max-height: 300px;">
+                        <img src="https://via.placeholder.com/150"
+                            class="img-fluid w-100 h-100 obj-fit-cover rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body h-100">
+                            <div class="d-flex flex-column h-100 justify-content-between">
+                                <div class="top-content">
+                                    <h5 class="card-title">Ibiza FR</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to
+                                        additional content. This content is a little bit longer.</p>
+                                    <div class="details">
+                                        <span class="badge mb-1 rounded-pill bg-semilight fs-7 text-dark">2017</span>
+                                        <span class="badge mb-1 rounded-pill bg-semilight fs-7 text-dark">103.000
+                                            KM</span>
+                                        <span class="badge mb-1 rounded-pill bg-semilight fs-7 text-dark">Essence</span>
+                                        <span class="badge mb-1 rounded-pill bg-semilight fs-7 text-dark">B.V.
+                                            Manuelle</span>
+                                    </div>
+                                </div>
+                                <div class="bottom-content d-flex justify-content-between mt-5">
+                                    <p class="card-text"><small class="text-muted">7h</small></p>
+                                    <button class="btn p-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--ic" width="28" height="28"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                            <path
+                                                d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3l7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--mdi" width="28" height="28"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                            <path d="M17 3H7a2 2 0 0 0-2 2v16l7-3l7 3V5a2 2 0 0 0-2-2z"
+                                                fill="currentColor">
+                                            </path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--flat-color-icons" width="28" height="28"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48">
+                                            <path fill="#F44336"
+                                                d="M34 9c-4.2 0-7.9 2.1-10 5.4C21.9 11.1 18.2 9 14 9C7.4 9 2 14.4 2 21c0 11.9 22 24 22 24s22-12 22-24c0-6.6-5.4-12-12-12z">
+                                            </path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--icon-park-outline" width="28" height="28"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48">
+                                            <path
+                                                d="M15 8C8.925 8 4 12.925 4 19c0 11 13 21 20 23.326C31 40 44 30 44 19c0-6.075-4.925-11-11-11c-3.72 0-7.01 1.847-9 4.674A10.987 10.987 0 0 0 15 8z"
+                                                stroke="currentColor" stroke-width="4" stroke-linecap="round"
+                                                stroke-linejoin="round" fill="none"></path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--whh" width="28" height="27"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 960">
+                                            <path
+                                                d="M928 960H576l-64-64H320v64H0V384h320v64h64l96-96L640 0h192v160l-64 96v64h160l96 64v512zM256 448H64v448h192V448zm704-21l-64-43H704V224l64-96V64h-79L544 384L416 512h-96v320h224l64 64h288l64-43V427z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--fontisto" width="29" height="28"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 27 24">
+                                            <path
+                                                d="M1.547 24a.33.33 0 0 1-.327-.295v-.001L0 11.336l-.001-.031c0-.182.147-.329.329-.329h8.233v13.025zm3.36-3.265v.001a1.301 1.301 0 1 0 1.301-1.301h-.002c-.719 0-1.301.582-1.302 1.301zm.48-8c0 .181.147.328.329.328h.764a.328.328 0 0 0 0-.656h-.77a.329.329 0 0 0-.329.329v.003zm-3.61 0c0 .181.147.328.328.328H4.61a.328.328 0 0 0 0-.656H2.099a.328.328 0 0 0-.328.328v.003zm9.8 9.388a1.886 1.886 0 0 1-.494-.253l.006.004l-.1-.063a20.97 20.97 0 0 1-.69-.452l-.101-.071c-.132-.095-.194-.137-.262-.133c-.24.005-.48.007-.72.01V12.01l-.013-.77c.451-.287.867-.56.992-.664c.17-.342.338-.628.524-.902l-.017.027c.085-.133.17-.265.248-.396l1.724-2.894c.08-.136.167-.272.254-.408c.145-.216.299-.474.44-.74l.024-.049a.879.879 0 0 0 .079-.521l.001.005l-.006-3.12c.063-.454.319-.838.68-1.072l.006-.004a1.97 1.97 0 0 1 1.162-.5h.007l.063-.001c.341 0 .663.081.949.224l-.012-.006c.191.092.354.19.507.3l-.01-.007l.106.07c.241.127.421.341.501.6l.002.007c.187.696.358 1.329.517 1.964l.066.259c.101.34.188.751.244 1.172l.005.042c-.171 1.574-.5 3.01-.976 4.378l.042-.138l7.693-.011h.028a1.643 1.643 0 0 1 1.63 1.848l.001-.008a1.982 1.982 0 0 1-.894 1.781l-.008.005a2.171 2.171 0 0 1 .372 1.4v-.007a1.848 1.848 0 0 1-1.137 1.873l-.012.004a2.375 2.375 0 0 1 .299 1.31v-.006a1.905 1.905 0 0 1-.886 1.733l-.008.005a2.791 2.791 0 0 1 .224 1.459l.001-.013v.188a1.834 1.834 0 0 1-2.007 1.719l.007.001h-4.429l-.015.001l-.016-.001h.001h-5.91c-.051 0-.104 0-.16.008c-.068.004-.14.01-.214.01h-.015a1.13 1.13 0 0 1-.299-.04l.008.002zm-6.015-1.387a.64.64 0 1 1 1.281.001a.64.64 0 0 1-1.281-.001z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav aria-label="...">
+            <ul class="pagination">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">&laquo;</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active" aria-current="page">
+                    <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">&raquo;</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- MASONRY a working example TODO: fix spacing margin/padding on row/col etc. -->
+    <!-- Pagination would then be dynamic. Add more content on scroll -->
+    <div class="ads d-none p-5 row" data-masonry='{"percentPosition": true}'>
+        <div class="card col-12 col-md-4 col-lg-3 m-0 m-sm-3 p-0" style="">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="https://via.placeholder.com/150" class="img-fluid w-100 h-100 obj-fit-cover rounded-start"
+                        alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card col-12 col-md-4 col-lg-3 m-0 m-sm-3 p-0" style="">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="https://via.placeholder.com/150" class="img-fluid w-100 h-100 obj-fit-cover rounded-start"
+                        alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card col-12 col-md-4 col-lg-3 m-0 m-sm-3 p-0" style="">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="https://via.placeholder.com/150" class="img-fluid w-100 h-100 obj-fit-cover rounded-start"
+                        alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Another model to show Ads -->
+    <div class="ads d-none flex-column flex-lg-row flex-lg-wrap flex-md-nowrap p-5">
+        <div class="card m-0 mb-3 m-sm-3 " style="flex: 0 0 45%;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="https://via.placeholder.com/150" class="img-fluid w-100 h-100 obj-fit-cover rounded-start"
+                        alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center text-lg-start bg-light text-muted">
+        <div class="d-none newsletter container p-4 pb-0">
+            <form action="">
+                <div class="col-auto mb-4 mb-md-0">
+                    <p class="lead pt-2">
+                        <strong>Abonnez-vous a notre newsletter</strong>
+                    </p>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-5 col-12 mb-4 mb-md-0">
+                        <div class="form-outline mb-4">
+                            <input type="email" id="form5Example25" class="form-control" />
+                            <label class="form-label" for="form5Example25">Email address</label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="btn btn-primary mb-4">
+                            S'abonner
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <section class="d-none social-media d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Restez branche en nous suivant sur les reseaux sociaux:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+
+        <section class="footer-links p-3 pt-5 bg-light">
+            <div class="container text-center text-md-start">
+                <div class="row">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <label class="fs-4 fw-bold mb-3">
+                            <i class="d-none fas fa-gem me-3"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                aria-hidden="true" role="img" class="iconify iconify--mdi" width="32" height="32"
+                                preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                <path
+                                    d="M6 11l1-4h10l1 4m.92-5c-.21-.6-.78-1-1.42-1h-11c-.64 0-1.21.4-1.42 1L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2h12v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.08-6M7 16H5v-2h2v2m12 0h-2v-2h2v2m-5 0h-4v-2h4v2z"
+                                    fill="currentColor"></path>
+                            </svg>
+                            <span class="align-text-top">
+                                Vautoor
+                            </span>
+                        </label>
+                        <p>
+                            Here you can use rows and columns to organize your footer content.
+                        </p>
+                    </div>
+
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Products
+                        </h6>
+                        <div class="d-flex flex-column">
+                            <a href="#!" class="text-reset">Angular</a>
+                            <a href="#!" class="text-reset">React</a>
+                            <a href="#!" class="text-reset">Vue</a>
+                            <a href="#!" class="text-reset">Laravel</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Useful links
+                        </h6>
+                        <div class="d-flex flex-column">
+                            <a href="#!" class="text-reset">Angular</a>
+                            <a href="#!" class="text-reset">React</a>
+                            <a href="#!" class="text-reset">Vue</a>
+                            <a href="#!" class="text-reset">Laravel</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Contact
+                        </h6>
+                        <div class="d-flex flex-column">
+                            <label>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    aria-hidden="true" role="img" class="iconify iconify--mdi" width="20" height="20"
+                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                    <path d="M10 20v-6h4v6h5v-8h3L12 3L2 12h3v8h5z" fill="currentColor"></path>
+                                </svg>
+                                <span class="ps-1 align-text-top">
+                                    Sidi Bel Abbes, SBA 22000, DZ
+                                </span>
+                            </label>
+                            <label>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    aria-hidden="true" role="img" class="iconify iconify--mdi" width="20" height="20"
+                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                    <path
+                                        d="M20 8l-8 5l-8-5V6l8 5l8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"
+                                        fill="currentColor"></path>
+                                </svg>
+                                <span class="ps-1 align-text-top">
+                                    info@brand.com
+                                </span>
+                            </label>
+                            <label>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    aria-hidden="true" role="img" class="iconify iconify--ic" width="20" height="20"
+                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                    <path
+                                        d="M19.23 15.26l-2.54-.29a1.99 1.99 0 0 0-1.64.57l-1.84 1.84a15.045 15.045 0 0 1-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52a2.001 2.001 0 0 0-1.99-1.77H5.03c-1.13 0-2.07.94-2 2.07c.53 8.54 7.36 15.36 15.89 15.89c1.13.07 2.07-.87 2.07-2v-1.73c.01-1.01-.75-1.86-1.76-1.98z"
+                                        fill="currentColor"></path>
+                                </svg>
+                                <span class="ps-1 align-text-top">
+                                    + 213 234 567 88
+                                </span>
+                            </label>
+                            <label>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    aria-hidden="true" role="img" class="iconify iconify--mdi" width="20" height="20"
+                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                    <path
+                                        d="M11 6h5v2h-5V6M8 9V3h11v6a3 3 0 0 1 3 3v6h-3v3H8v-3H7V9h1m2-4v4h7V5h-7m0 10v4h7v-4h-7m9-4a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1M4 9h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2z"
+                                        fill="currentColor"></path>
+                                </svg>
+                                <span class="ps-1 align-text-top">
+                                    021 75 21 00
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            <strong>
+                Vautoor © 2022
+            </strong>
+        </div>
+    </footer>
+</body>
+
+</html>
