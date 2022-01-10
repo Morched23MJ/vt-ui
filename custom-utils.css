@@ -1,0 +1,50 @@
+/* Overwrite Bootstrap CSS */
+
+/* NAVBAR */
+.navbar {
+    height: 75px;
+    z-index: 100;
+}
+
+.navbar div {
+    background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.navbar-toggler {
+    border: none !important;
+    color: black !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+/* CAROUSEL */
+.carousel-item {
+    max-height: 500px;
+}
+
+@media screen and (min-width: 992px) {
+    .carousel-item {
+        height: calc(100vh - 75px);
+        max-height: 800px;
+    }
+}
+
+/* --------------------------------------------- */
+/* My Utility Classes */
+.obj-fit-cover {
+    object-fit: cover;
+}
+
+.fs-7 {
+    font-size: 14px;
+}
+
+.bg-semilight {
+    background-color: #eee;
+}
+
+.clickable-row {
+    cursor: pointer;
+}
