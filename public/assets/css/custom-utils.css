@@ -50,17 +50,18 @@
 }
 
 /* My Custom CSS */
-.admin-nav a {
+
+.custom-nav a {
     text-decoration: none;
     color: black;
 }
 
-.admin-nav a:hover {
+.custom-nav a:hover {
     text-decoration: none;
     color: black;
     background-color: #eee;
 }
 
-.admin-nav .active {
+.custom-nav .active {
     background-color: #eee !important;
 }
