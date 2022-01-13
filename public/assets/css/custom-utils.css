@@ -41,6 +41,26 @@
     font-size: 14px;
 }
 
+.fs-8 {
+    font-size: 13px;
+}
+
+.fs-9 {
+    font-size: 12px;
+}
+
+.fw-medium {
+    font-weight: 500 !important;
+}
+
+.fw-semibold {
+    font-weight: 600 !important;
+}
+
+.bottom-0 {
+    bottom: 0;
+}
+
 .bg-semilight {
     background-color: #eee;
 }
@@ -49,7 +69,27 @@
     cursor: pointer;
 }
 
+.red {
+    background-color: rgba(255, 0, 0, .3);
+}
+
+.green {
+    background-color: rgba(0, 255, 0, .3);
+}
+
+.blue {
+    background-color: rgba(0, 0, 255, .3);
+}
+
 /* My Custom CSS */
+
+* {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: .001em;
+    -webkit-font-smoothing: antialiased;
+    transition: all ease-in-out .15s !important;
+}
 
 .custom-nav a {
     text-decoration: none;
@@ -64,4 +104,107 @@
 
 .custom-nav .active {
     background-color: #eee !important;
+}
+
+.illustration {
+    position: absolute;
+    /* top: 200px; */
+    bottom: 0;
+    width: 67%;
+}
+
+.auth-left {
+    min-height: 100vh;
+}
+
+@media screen and (max-width: 992px) {
+    .auth-left {
+        min-height: 55vw;
+    }
+
+    .illustration {
+        width: 30%;
+    }
+}
+
+/* Theme */
+
+:root {
+    --accent-color: #0c1324;
+    --accent-color-rgb: 12, 19, 36;
+    --accent-color-light: #99ccec;
+    --accent-color-light-rgb: 153, 204, 236;
+}
+
+.text-accent {
+    color: var(--accent-color) !important;
+}
+
+.text-accent-light {
+    color: var(--accent-color-light) !important;
+}
+
+.bg-accent {
+    background-color: var(--accent-color) !important;
+}
+
+.bg-accent-light {
+    background-color: var(--accent-color-light) !important;
+}
+
+.btn-accent {
+    background-color: var(--accent-color) !important;
+}
+
+.btn-accent-light {
+    background-color: var(--accent-color-light) !important;
+}
+
+.btn-accent-outline-light {
+    background-color: rgba(var(--accent-color-light-rgb), .3) !important;
+}
+
+.btn-accent-outline-light:hover {
+    background-color: rgba(var(--accent-color-light-rgb), 1) !important;
+}
+
+.btn-accent:hover,
+.btn-accent-light:hover {
+    filter: brightness(0.9);
+}
+
+.btn-cta {
+    font-weight: 600 !important;
+}
+
+.btn,
+.form-control {
+    border-radius: .5rem !important;
+    padding: 10px 24px !important;
+}
+
+.form-label,
+.form-check-label {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.form-control {
+    border: none !important;
+    outline: none !important;
+    background-color: rgba(var(--accent-color-light-rgb), .15) !important;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+    background-color: rgba(var(--accent-color-light-rgb), .3) !important;
+}
+
+.form-check-input:checked {
+    background-color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+}
+
+.form-check-input:focus {
+    box-shadow: none !important;
 }

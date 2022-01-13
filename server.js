@@ -27,5 +27,4 @@ app.get('/admin/users', (req, res) => res.render('pages/admin/users'));
 app.get('/admin/users/:id', (req, res) => res.render('pages/admin/user'));
 
 const port = process.env.PORT || 3100;
-
 app.listen(port);
