@@ -39,13 +39,18 @@
     box-shadow: none !important;
 }
 
-/* CAROUSEL */
-.carousel-item {
+/* CAROUSELS */
+
+.about .carousel-item {
     max-height: 500px;
 }
 
+.car-carousel .carousel-item {
+    max-height: calc(100vh - 75px);
+}
+
 @media screen and (min-width: 992px) {
-    .carousel-item {
+    .about .carousel-item {
         height: calc(100vh - 75px);
         max-height: 800px;
     }
@@ -113,31 +118,33 @@
 @media screen and (max-width: 576px) {
     .search-dropdown.dropdown-menu-end {
         right: -80px !important;
-    }  
+    }
 
     .notifications-dropdown.dropdown-menu-end {
         right: -50px !important;
-    }   
-} 
+    }
+}
 
 
-.dropdown .dropdown-menu{
-    animation-name: dropdownAnim; 
+.dropdown .dropdown-menu {
+    animation-name: dropdownAnim;
     animation-duration: .3s;
 }
 
 @keyframes dropdownAnim {
     from {
-        opacity:.1;
+        opacity: .1;
         transform: translateY(12px);
     }
+
     to {
-        opacity:1;
+        opacity: 1;
         transform: translateY(0);
     }
 }
 
-.form-check-input, .form-check-label {
+.form-check-input,
+.form-check-label {
     cursor: pointer;
 }
 
@@ -311,17 +318,24 @@ body {
     width: 350px;
 }
 
-.admin-dropdown .col-6, .profile-dropdown .col-6 {
+.admin-dropdown .col-6,
+.profile-dropdown .col-6 {
     height: 100px;
 }
 
-.admin-dropdown a, .profile-dropdown a, .notifications-dropdown a, .search-dropdown a {
+.admin-dropdown a,
+.profile-dropdown a,
+.notifications-dropdown a,
+.search-dropdown a {
     color: var(--dark-color);
     text-decoration: none;
     transition: .1s !important;
 }
 
-.admin-dropdown a:hover, .profile-dropdown .links .col-6 a:hover, .notifications-dropdown a:hover, .search-dropdown a:hover {
+.admin-dropdown a:hover,
+.profile-dropdown .links .col-6 a:hover,
+.notifications-dropdown a:hover,
+.search-dropdown a:hover {
     background-color: rgba(var(--accent-color-rgb), .05);
     color: currentColor;
 }
@@ -431,7 +445,8 @@ body {
     color: currentColor;
 }
 
-.link-accent, .link-accent-light {
+.link-accent,
+.link-accent-light {
     text-decoration: none;
     color: var(--dark-color);
 }
