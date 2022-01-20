@@ -9,10 +9,11 @@ app.get('/', (req, res) => res.render('pages/misc/about'));
 
 // ADS routes
 app.get('/ads', (req, res) => res.render('pages/ads/list'));
+app.get('/ad', (req, res) => res.render('pages/ads/ad'));
 
 // PROFILE routes
 app.get('/profile', (req, res) => res.render('pages/profile/profile'));
-app.get('/profile/info', (req, res) => res.render('pages/profile/info'));
+app.get('/info', (req, res) => res.render('pages/profile/info'));
 app.get('/myads', (req, res) => res.render('pages/profile/myads'));
 
 // AUTH routes

@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-12 col-md-4">
                     <div class="d-flex flex-column align-items-center align-items-md-start">
-                        <h5 class="fw-semibold">General</h5>
+                        <h5 class="fw-semibold">Compte</h5>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a class="fw-semibold fs-8 link-accent text-muted-lg"
@@ -14,7 +14,7 @@
                                 <li class="breadcrumb-item"><a class="fw-semibold fs-8 link-accent text-muted-lg"
                                         href="/profile">Profile</a></li>
                                 <li class="breadcrumb-item active text-align-bottom" aria-current="page">
-                                    <span class="fs-8">General</span>
+                                    <span class="fs-8">Compte</span>
                                 </li>
                             </ol>
                         </nav>
@@ -22,103 +22,46 @@
                 </div>
                 <div class="col-12 col-md-8 my-3 my-md-0">
                     <nav class="d-flex justify-content-center justify-content-md-end">
-                        <a class="btn btn-cta btn-link me-1 active" href="/info">General</a>
-                        <a class="btn btn-cta btn-link me-1" href="/profile">Compte</a>
+                        <a class="btn btn-cta btn-link me-1" href="/info">General</a>
+                        <a class="btn btn-cta btn-link me-1 active" href="/profile">Compte</a>
                         <a class="btn btn-cta btn-link me-1" href="/myads">Mes Annonces</a>
                     </nav>
                 </div>
             </div>
             <div class="col-12 p-3 p-md-5 bg-white rounded-lg shadow-xl">
                 <!-- Compte template -->
-                <div class="d-none dd-flex">
-                    <img style="max-height: 120px" class="rounded w-auto obj-fit-cover"
-                        src="https://lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg" />
-                    <div class="ms-3 p-3">
-                        <h3>@SidAhmed
-                            <button class="btn ps-1 pt-0" data-bs-toggle="modal" data-bs-target="#changeUsernameModal">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    aria-hidden="true" role="img" class="iconify iconify--ic" width="24" height="24"
-                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                    <path
-                                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM21.41 6.34l-3.75-3.75l-2.53 2.54l3.75 3.75l2.53-2.54z"
-                                        fill="currentColor"></path>
-                                </svg>
-                            </button>
-                        </h3>
-                        <h6>sid@gmail.com
-                            <button class="btn ps-1 pt-0" data-bs-toggle="modal" data-bs-target="#changeEmailModal">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    aria-hidden="true" role="img" class="iconify iconify--ic" width="18" height="18"
-                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                    <path
-                                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM21.41 6.34l-3.75-3.75l-2.53 2.54l3.75 3.75l2.53-2.54z"
-                                        fill="currentColor"></path>
-                                </svg>
-                            </button>
-                        </h6>
-                        <div class="modal fade" id="changeUsernameModal" tabindex="-1"
-                            aria-labelledby="changeUsernameModal" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="usernameModalLabel">Changer le nom d'utilisateur
-                                        </h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form class="row g-3">
-                                            <input placeholder="Entrez votre nouveau nom d'utilisateur" type="text"
-                                                class="form-control" id="usernameInput">
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Fermer</button>
-                                        <button type="button" class="btn btn-primary">Mettre a jour</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal fade" id="changeEmailModal" tabindex="-1" aria-labelledby="changeEmailModal"
-                            aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="emailModalLabel">Changer l'email</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form class="row g-3">
-                                            <input placeholder="Entrez votre nouvel email" type="email"
-                                                class="form-control" id="emailInput">
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Fermer</button>
-                                        <button type="button" class="btn btn-primary">Mettre a jour</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <form class="offset-md-2 col-md-8 p-1 p-sm-5">
-                    <div class="row align-items-center mb-3">
+                    <div class="row align-items-start mb-3">
                         <label for="usernameInput" class="form-label fw-medium fs-7 col-lg-3">Nom d'utilisateur</label>
                         <div class="col-lg-9">
-                            <input placeholder="Nom d'utilisateur" type="text" class="form-control" id="usernameInput">
+                            <div class="accordion simple-accordion" id="usernameAccordion">
+                                <div class="accordion-item">
+                                    <div class="d-flex justify-content-between">
+                                        <span class="fs-7 fw-semibold">morch23mj</span>
+                                        <button class="btn fw-semibold text-accent" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Changer
+                                        </button>
+                                    </div>
+                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="headingOne" data-bs-parent="#usernameAccordion">
+                                        <div class="accordion-body mt-3 p-0">
+                                            <input placeholder="Nom d'utilisateur" type="text"
+                                                class="form-control" id="usernameInput">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <span class="offset-lg-3 col-lg-9 mt-1 fs-7 text-danger">
+                        <span class="d-none offset-lg-3 col-lg-9 mt-1 fs-7 text-danger">
                             Nom d'utilisateur est deja utilise
                         </span>
                     </div>
                     <div class="row align-items-center mb-3">
                         <label for="emailInput" class="form-label fw-medium fs-7 col-lg-3">Email</label>
                         <div class="col-lg-9">
-                            <input placeholder="Email" type="email" class="form-control" id="emailInput">
+                            <input placeholder="Email" type="email" class="form-control is-invalid" id="emailInput">
                         </div>
                         <span class="offset-lg-3 col-lg-9 mt-1 fs-7 text-danger">
                             Email non valide
@@ -131,7 +74,7 @@
                             <input placeholder="Mot de passe actuel" type="password" class="form-control"
                                 id="currentPasswordInput">
                         </div>
-                        <span class="offset-lg-3 col-lg-9 mt-1 fs-7 text-danger">
+                        <span class="d-none offset-lg-3 col-lg-9 mt-1 fs-7 text-danger">
                             Mot de passe errone
                         </span>
                     </div>
@@ -142,7 +85,7 @@
                             <input placeholder="Nouveau mot de passe" type="password" class="form-control"
                                 id="passwordInput">
                         </div>
-                        <span class="offset-lg-3 col-lg-9 mt-1 fs-7 text-danger">
+                        <span class="d-none offset-lg-3 col-lg-9 mt-1 fs-7 text-danger">
                             Mot de passe faible
                         </span>
                     </div>
@@ -154,10 +97,11 @@
                             <input placeholder="Confirmer nouveau mot de passe" type="password" class="form-control"
                                 id="confirmPasswordInput">
                         </div>
-                        <span class="offset-lg-3 col-lg-9 mt-1 fs-7 text-danger">
+                        <span class="d-none offset-lg-3 col-lg-9 mt-1 fs-7 text-danger">
                             Mot de passe non identique
                         </span>
                     </div>
+
                     <div class="mt-5">
                         <button type="submit" class="btn btn-cta btn-accent">Mettre à jour</button>
                         <a href="/profile" class="btn btn-cta">Annuler</a>

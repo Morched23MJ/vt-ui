@@ -2,17 +2,19 @@
     <%- include('../../components/navbar'); -%>
         <!-- The desired model to show Ads. Cards, one under the other, just like leboncoin.com -->
         <!-- Added pagination -->
-        <div class="ads p-md-5 p-3 m-0 row">
+        <div class="ad p-md-5 p-3 m-0 row">
             <div class="top-nav row">
                 <div class="col-12 col-md-4">
                     <div class="d-flex flex-column align-items-center align-items-md-start">
-                        <h5 class="fw-semibold">Annonces</h5>
+                        <h1 class="fw-semibold">Ibiza FR</h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a class="fw-semibold fs-8 link-accent text-muted-lg"
                                         href="/">Acceuil</a></li>
+                                <li class="breadcrumb-item"><a class="fw-semibold fs-8 link-accent text-muted-lg"
+                                        href="/ads">Annonces</a></li>
                                 <li class="breadcrumb-item active text-align-bottom" aria-current="page">
-                                    <span class="fs-8">Annonces</span>
+                                    <span class="fs-8">Ibiza FR</span>
                                 </li>
                             </ol>
                         </nav>
@@ -720,94 +722,7 @@
                     </a>
                 </div>
             </div>
-            <nav aria-label="...">
-                <ul class="pagination">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">&laquo;</a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item active" aria-current="page">
-                        <a class="page-link" href="#">2</a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">&raquo;</a>
-                    </li>
-                </ul>
-            </nav>
         </div>
 
-        <!-- MASONRY a working example TODO: fix spacing margin/padding on row/col etc. -->
-        <!-- Pagination would then be dynamic. Add more content on scroll -->
-        <div class="ads d-none p-5 row" data-masonry='{"percentPosition": true}'>
-            <div class="card col-12 col-md-4 col-lg-3 m-0 m-sm-3 p-0" style="">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="https://via.placeholder.com/150"
-                            class="img-fluid w-100 h-100 obj-fit-cover rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card col-12 col-md-4 col-lg-3 m-0 m-sm-3 p-0" style="">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="https://via.placeholder.com/150"
-                            class="img-fluid w-100 h-100 obj-fit-cover rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card col-12 col-md-4 col-lg-3 m-0 m-sm-3 p-0" style="">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="https://via.placeholder.com/150"
-                            class="img-fluid w-100 h-100 obj-fit-cover rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Another model to show Ads -->
-        <div class="ads d-none flex-column flex-lg-row flex-lg-wrap flex-md-nowrap p-5">
-            <div class="card m-0 mb-3 m-sm-3 " style="flex: 0 0 45%;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="https://via.placeholder.com/150"
-                            class="img-fluid w-100 h-100 obj-fit-cover rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <%- include('../../components/footer'); -%>
             <%- include('../base/base-tail'); -%>

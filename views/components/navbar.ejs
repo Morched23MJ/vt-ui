@@ -20,7 +20,7 @@
                     </g>
                 </svg>
             </a>
-            <div class="profile-dropdown dropdown-menu bg-light border-0 p-0 rounded-lg shadow-sm dropdown-menu-start"
+            <div class="admin-dropdown dropdown-menu bg-light border-0 p-0 rounded-lg shadow-sm dropdown-menu-start"
                 aria-labelledby="navbarScrollingDropdown">
                 <div class="d-flex align-items-end d-none bg-accent rounded-top p-3">
                     <img style="max-height: 30px" class="d-none rounded-lg w-auto obj-fit-cover"
@@ -286,16 +286,92 @@
         <ul class="nav me-0">
             <!-- SEARCH BTN -->
             <li class="">
-                <a class="ms-3" href="/search">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        aria-hidden="true" role="img" class="iconify iconify--bx" width="20" height="20"
-                        preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                        <path
-                            d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396l1.414-1.414l-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8s3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6s-6-2.691-6-6s2.691-6 6-6z"
-                            fill=""></path>
-                    </svg>
+                <div class="dropdown">
 
-                </a>
+                    <a class="ms-3" href="#" id="searchDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            aria-hidden="true" role="img" class="iconify iconify--bx" width="20" height="20"
+                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                            <path
+                                d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396l1.414-1.414l-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8s3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6s-6-2.691-6-6s2.691-6 6-6z"
+                                fill=""></path>
+                        </svg>
+                    </a>
+                    <div style="width: 330px;"
+                        class="search-dropdown dropdown-menu bg-light border-0 p-0 rounded-lg shadow-sm dropdown-menu-end"
+                        aria-labelledby="searchDropdown">
+                        <div style="border-bottom: 1px solid rgba(0,0,0,.1);" class="p-3">
+                            <form class="g-0">
+                                <div class="form-group">
+                                    <input placeholder="" type="text" class="form-control ps-5" id="searchInput">
+                                    <span class="d-none mt-1 fs-7 text-danger">
+                                        Pas de resultats
+                                    </span>
+                                    <span class="mt-1 fs-8 fw-semibold text-muted">
+                                        3 resultats
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <a class="w-100" href="/notifications">
+                                <div class="p-3 notification">
+                                    <div class="d-flex flex-column justify-content-between">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <span class="fw-medium fs-8">Mercedes C, serie 9</span>
+                                            <span class="fw-bold fs-9 text-muted">2009</span>
+                                        </div>
+                                        <div class="row">
+                                            <span class="col-4 fs-8 fw-semibold text-accent">DA 140.000</span>
+                                            <div class="d-flex justify-content-between offset-1 col-7">
+                                                <span class="fs-9 fw-semibold text-muted">128km</span>
+                                                <span class="fs-9 fw-semibold text-muted">auto</span>
+                                                <span class="fs-9 fw-semibold text-muted">essence</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="w-100" href="/notifications">
+                                <div class="p-3 notification">
+                                    <div class="d-flex flex-column justify-content-between">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <span class="fw-medium fs-8">Leon Seat</span>
+                                            <span class="fw-bold fs-9 text-muted">2014</span>
+                                        </div>
+                                        <div class="row">
+                                            <span class="col-4 fs-8 fw-semibold text-accent">DA 230.000</span>
+                                            <div class="d-flex justify-content-between offset-1 col-7">
+                                                <span class="fs-9 fw-semibold text-muted">328km</span>
+                                                <span class="fs-9 fw-semibold text-muted">manuelle</span>
+                                                <span class="fs-9 fw-semibold text-muted">diesel</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="w-100" href="/notifications">
+                                <div class="p-3 notification">
+                                    <div class="d-flex flex-column justify-content-between">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <span class="fw-medium fs-8">Ibiza FR</span>
+                                            <span class="fw-bold fs-9 text-muted">2019</span>
+                                        </div>
+                                        <div class="row">
+                                            <span class="col-4 fs-8 fw-semibold text-accent">DA 190.000</span>
+                                            <div class="d-flex justify-content-between offset-1 col-7">
+                                                <span class="fs-9 fw-semibold text-muted">130km</span>
+                                                <span class="fs-9 fw-semibold text-muted">manuelle</span>
+                                                <span class="fs-9 fw-semibold text-muted">diesel</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </li>
             <!-- NOTIFCATIONS DROPDOWN -->
             <li class="">
@@ -313,21 +389,76 @@
                     <div style="width: 330px;"
                         class="notifications-dropdown dropdown-menu bg-light border-0 p-0 rounded-lg shadow-sm dropdown-menu-end"
                         aria-labelledby="navbarScrollingDropdown">
+                        <div style="border-bottom: 1px solid rgba(0,0,0,.1);"
+                            class="d-flex justify-content-between p-3">
+                            <span class="fw-semibold fs-8">Vous avez 4 notifications</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                aria-hidden="true" role="img" class="iconify iconify--ri" width="18" height="18"
+                                preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                <path
+                                    d="M8.686 4l2.607-2.607a1 1 0 0 1 1.414 0L15.314 4H19a1 1 0 0 1 1 1v3.686l2.607 2.607a1 1 0 0 1 0 1.414L20 15.314V19a1 1 0 0 1-1 1h-3.686l-2.607 2.607a1 1 0 0 1-1.414 0L8.686 20H5a1 1 0 0 1-1-1v-3.686l-2.607-2.607a1 1 0 0 1 0-1.414L4 8.686V5a1 1 0 0 1 1-1h3.686zM12 15a3 3 0 1 0 0-6a3 3 0 0 0 0 6z"
+                                    fill="black"></path>
+                            </svg>
+                        </div>
                         <div class="d-flex flex-column">
                             <a class="w-100" href="/notifications">
-                                <div class="notification d-flex p-3 justify-content-between">
-                                    <p class="m-0 fw-medium fs-8">
-                                        Lorem ipsum dolor sit amet consecte turlicabus.
-                                    </p>
-                                    <span class="fs-9 text-muted">7h</span>
+                                <div class="d-flex align-items-center p-3 notification">
+                                    <div class="p-2 bg-dark-15 rounded-lg icon me-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--jam" width="24" height="24"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                            <path
+                                                d="M4 5.065h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-10a2 2 0 0 1 2-2zm3 8a1 1 0 1 0 0 2h6a1 1 0 0 0 0-2H7zm10-5v2h2v-2h-2z"
+                                                fill="#00A3FF"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-between">
+                                        <p class="fw-medium mb-1 fs-8">
+                                            Lorem ipsum dolor sit amecteus.
+                                        </p>
+                                        <span class="fs-9 text-muted">Il y a 23 minutes</span>
+                                    </div>
                                 </div>
                             </a>
                             <a class="w-100" href="/notifications">
-                                <div class="notification d-flex p-3 justify-content-between">
-                                    <p class="m-0 fw-medium fs-8">
-                                        Lorem ipsum dolor sit amet consecte turlicabus.
-                                    </p>
-                                    <span class="fs-9 text-muted">7h</span>
+                                <div class="d-flex align-items-center p-3 notification">
+                                    <div class="p-2 bg-dark-15 rounded-lg icon me-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--jam" width="24" height="24"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                            <path
+                                                d="M4 5.065h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-10a2 2 0 0 1 2-2zm3 8a1 1 0 1 0 0 2h6a1 1 0 0 0 0-2H7zm10-5v2h2v-2h-2z"
+                                                fill="#151471"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-between">
+                                        <p class="fw-medium mb-1 fs-8">
+                                            Lorem ipsum dolor sit amecteus.
+                                        </p>
+                                        <span class="fs-9 text-muted">Il y a 7 heures</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="w-100" href="/notifications">
+                                <div class="d-flex align-items-center p-3 notification">
+                                    <div class="p-2 bg-dark-15 rounded-lg icon me-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            class="iconify iconify--jam" width="24" height="24"
+                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                            <path
+                                                d="M4 5.065h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-10a2 2 0 0 1 2-2zm3 8a1 1 0 1 0 0 2h6a1 1 0 0 0 0-2H7zm10-5v2h2v-2h-2z"
+                                                fill="#188455"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-between">
+                                        <p class="fw-medium mb-1 fs-8">
+                                            Lorem ipsum dolor sit amecteus.
+                                        </p>
+                                        <span class="fs-9 text-muted">Il y a 28 jours</span>
+                                    </div>
                                 </div>
                             </a>
                         </div>

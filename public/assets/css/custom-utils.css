@@ -108,6 +108,50 @@
     font-size: 13px;
 }
 
+/* DROPDOWNS */
+
+@media screen and (max-width: 576px) {
+    .search-dropdown.dropdown-menu-end {
+        right: -80px !important;
+    }  
+
+    .notifications-dropdown.dropdown-menu-end {
+        right: -50px !important;
+    }   
+} 
+
+
+.dropdown .dropdown-menu{
+    animation-name: dropdownAnim; 
+    animation-duration: .3s;
+}
+
+@keyframes dropdownAnim {
+    from {
+        opacity:.1;
+        transform: translateY(12px);
+    }
+    to {
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+.form-check-input, .form-check-label {
+    cursor: pointer;
+}
+
+.simple-accordion .accordion-item {
+    padding: 0 !important;
+    border: 0 !important;
+}
+
+.simple-accordion .accordion-item button {
+    padding: 0 !important;
+}
+
+
+
 /* --------------------------------------------- */
 /* My Utility Classes */
 
@@ -251,24 +295,33 @@ body {
     }
 }
 
+#searchInput {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBhcmlhLWhpZGRlbj0idHJ1ZSIgcm9sZT0iaW1nIiBjbGFzcz0iaWNvbmlmeSBpY29uaWZ5LS1ieCIgd2lkdGg9IjFlbSIgaGVpZ2h0PSIxZW0iIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIG1lZXQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEwIDE4YTcuOTUyIDcuOTUyIDAgMCAwIDQuODk3LTEuNjg4bDQuMzk2IDQuMzk2bDEuNDE0LTEuNDE0bC00LjM5Ni00LjM5NkE3Ljk1MiA3Ljk1MiAwIDAgMCAxOCAxMGMwLTQuNDExLTMuNTg5LTgtOC04cy04IDMuNTg5LTggOHMzLjU4OSA4IDggOHptMC0xNGMzLjMwOSAwIDYgMi42OTEgNiA2cy0yLjY5MSA2LTYgNnMtNi0yLjY5MS02LTZzMi42OTEtNiA2LTZ6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4=");
+    background-repeat: no-repeat;
+    background-position: 6% 50%;
+    background-size: 1rem;
+    /* background-position: right calc(0.375em + 0.375rem) center; */
+    /* background-size: calc(0.75em + 0.75rem) calc(0.75em + 0.75rem); */
+}
+
 
 /* PROFILE DROPDOWN-MENU */
 
-.profile-dropdown {
+.dropdown-menu {
     width: 350px;
 }
 
-.profile-dropdown .links .col-6 {
+.admin-dropdown .col-6, .profile-dropdown .col-6 {
     height: 100px;
 }
 
-.profile-dropdown .links .col-6 a, .notifications-dropdown a {
+.admin-dropdown a, .profile-dropdown a, .notifications-dropdown a, .search-dropdown a {
     color: var(--dark-color);
     text-decoration: none;
     transition: .1s !important;
 }
 
-.profile-dropdown .links .col-6 a:hover, .notifications-dropdown a:hover {
+.admin-dropdown a:hover, .profile-dropdown .links .col-6 a:hover, .notifications-dropdown a:hover, .search-dropdown a:hover {
     background-color: rgba(var(--accent-color-rgb), .05);
     color: currentColor;
 }

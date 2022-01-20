@@ -1,43 +1,97 @@
 <%- include('../base/base-head'); -%>
     <%- include('../../components/navbar'); -%>
-        <div class="d-noneee p-3 p-md-5">
+
+        <div class="p-3 p-md-5">
+            <!-- TOP NAV -->
             <div class="row">
-                <div class="col-12 col-lg-3 px-0">
-                    <ul style="z-index: -1;" class="nav custom-nav shadow-lg rounded flex-lg-column">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/profile">Compte</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="/profile/info">Informations Personnelles</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/myads">Mes Annonces</a>
-                        </li>
-                    </ul>
+                <div class="col-12 col-md-4">
+                    <div class="d-flex flex-column align-items-center align-items-md-start">
+                        <h5 class="fw-semibold">General</h5>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a class="fw-semibold fs-8 link-accent text-muted-lg"
+                                        href="/">Acceuil</a></li>
+                                <li class="breadcrumb-item"><a class="fw-semibold fs-8 link-accent text-muted-lg"
+                                        href="/profile">Profile</a></li>
+                                <li class="breadcrumb-item active text-align-bottom" aria-current="page">
+                                    <span class="fs-8">General</span>
+                                </li>
+                            </ol>
+                        </nav>
+                    </div>
                 </div>
-                <div class="col-12 col-lg-9 p-3 shadow-lg rounded">
-                    <!-- content -->
-                    <form class="row g-3">
-                        <h5>Remplir informations personnelles</h5>
-                        <div class="">
-                            <label for="fullnameInput" class="form-label">Nom et prénom</label>
-                            <input placeholder="Entrez votre nom et prénom" type="text" class="form-control"
-                                id="fullnameInput">
-                            <span class="d-inline-block alert alert-danger py-1 fs-7 fw-bold mt-1" role="alert">
-                                Nom et prenom non valides
-                            </span>
-                        </div>
-                        <div class="">
-                            <label for="phoneInput" class="form-label">Numéro de téléphone</label>
-                            <input placeholder="Entrez votre numéro de telephone" type="number" class="form-control"
-                                id="phoneInput">
-                            <span class="d-inline-block alert alert-danger py-1 fs-7 fw-bold mt-1" role="alert">
-                                Numéro de téléphone non valide
-                            </span>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Mettre a jour</button>
-                    </form>
+                <div class="col-12 col-md-8 my-3 my-md-0">
+                    <nav class="d-flex justify-content-center justify-content-md-end">
+                        <a class="btn btn-cta btn-link me-1 active" href="/info">General</a>
+                        <a class="btn btn-cta btn-link me-1" href="/profile">Compte</a>
+                        <a class="btn btn-cta btn-link me-1" href="/myads">Mes Annonces</a>
+                    </nav>
                 </div>
+            </div>
+            <div class="col-12 p-3 p-md-5 bg-white rounded-lg shadow-xl">
+                <!-- Compte template -->
+                <form class="offset-md-2 col-md-8 p-1 p-sm-5">
+                    <div class="row align-items-start mb-3">
+                        <label for="lastnameInput" class="form-label fw-medium fs-7 col-lg-3">Nom</label>
+                        <div class="col-lg-9">
+                            <div class="accordion simple-accordion" id="usernameAccordion">
+                                <div class="accordion-item">
+                                    <div class="d-flex justify-content-between">
+                                        <span class="fs-7 fw-semibold">Khattaf</span>
+                                        <button class="btn fw-semibold text-accent" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Changer
+                                        </button>
+                                    </div>
+                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="headingOne" data-bs-parent="#usernameAccordion">
+                                        <div class="accordion-body mt-3 p-0">
+                                            <input placeholder="Nom" type="text" class="form-control"
+                                                id="lastnameInput">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="d-none offset-lg-3 col-lg-9 mt-1 fs-7 text-danger">
+                            Nom non valide
+                        </span>
+                    </div>
+                    <div class="row align-items-center mb-3">
+                        <label for="firstnameInput" class="form-label fw-medium fs-7 col-lg-3">Prenom</label>
+                        <div class="col-lg-9">
+                            <input placeholder="Prenom" type="text" class="form-control" id="firstnameInput">
+                        </div>
+                        <span class="d-none offset-lg-3 col-lg-9 mt-1 fs-7 text-danger">
+                            Prenom non valide
+                        </span>
+                    </div>
+                    <div class="row align-items-center mb-3">
+                        <label for="genderInput" class="form-label fw-medium fs-7 col-lg-3">Sexe</label>
+                        <div class="col-lg-9">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Homme</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                    value="option2">
+                                <label class="form-check-label" for="inlineRadio2">Femme</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                                    value="option3" disabled>
+                                <label class="form-check-label" for="inlineRadio3">Machine</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <button type="submit" class="btn btn-cta btn-accent">Mettre à jour</button>
+                        <a href="/profile" class="btn btn-cta">Annuler</a>
+                    </div>
+                </form>
             </div>
         </div>
         <%- include('../../components/footer'); -%>
