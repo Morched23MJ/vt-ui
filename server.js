@@ -10,6 +10,7 @@ app.get('/', (req, res) => res.render('pages/misc/about'));
 // ADS routes
 app.get('/ads', (req, res) => res.render('pages/ads/list'));
 app.get('/ad', (req, res) => res.render('pages/ads/ad'));
+app.get('/ads/new', (req, res) => res.render('pages/ads/new'));
 
 // PROFILE routes
 app.get('/profile', (req, res) => res.render('pages/profile/profile'));
