@@ -1,0 +1,436 @@
+<%- include('../base/base-head'); -%>
+    <%- include('../../components/navbar'); -%>
+        <!-- The desired model to show Ads. Cards, one under the other, just like leboncoin.com -->
+        <!-- Added pagination -->
+        <div class="new-ad p-md-5 p-3 m-0 row">
+            <!-- TOP NAV/BREADCRUMB -->
+            <div class="top-nav row">
+                <div class="d-flex flex-column align-items-center align-items-md-start">
+                    <h3 class="fw-semibold">Créer annonce</h3>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a class="fw-semibold fs-8 link-accent text-muted-lg"
+                                    href="/">Acceuil</a></li>
+                            <li class="breadcrumb-item"><a class="fw-semibold fs-8 link-accent text-muted-lg"
+                                    href="/ads">Annonces</a></li>
+                            <li class="breadcrumb-item active text-align-bottom" aria-current="page">
+                                <span class="fs-8">Créer annonce</span>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="content row g-0 mt-5">
+                <!-- FORM -->
+                <div class="form-container col-lg-8 p-0 order-2 order-lg-1">
+                    <form>
+                        <div class="card mb-3 rounded-lg shadow-sm">
+                            <div class="card-body">
+                                <h6 class="fw-semibold">Informations Generales</h6>
+                                <div class="p-md-5 py-3">
+                                    <div class="form-group mb-3">
+                                        <label for="titleInput" class="form-label fw-medium fs-7">Titre *</label>
+                                        <input placeholder="Titre" type="text" class="form-control" id="titleInput">
+                                        <span class="d-none mt-1 fs-7 text-danger">
+                                            Titre non valide
+                                        </span>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="vehicleConditionInput" class="form-label fw-medium fs-7">Etat
+                                            *</label>
+                                        <div class="col-lg-9">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                    id="inlineRadio1" value="option1">
+                                                <label class="form-check-label" for="inlineRadio1">Occasion</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                    id="inlineRadio2" value="option2">
+                                                <label class="form-check-label" for="inlineRadio2">Neuf</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="priceInput" class="form-label fw-medium fs-7">Prix *</label>
+                                        <input placeholder="Prix" type="number" class="form-control" id="priceInput">
+                                        <span class="d-none mt-1 fs-7 text-danger">
+                                            Prix non valide
+                                        </span>
+                                        <div class="form-check form-switch mt-1">
+                                            <input class="form-check-input" type="checkbox" id="negotiableInput"
+                                                checked>
+                                            <label class="form-check-label" for="negotiableInput">Negotiable</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card my-3 rounded-lg shadow-sm">
+                            <div class="card-body">
+                                <h6 class="fw-semibold">Specifications du Vehicule</h6>
+                                <div class="p-md-5 py-3">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label fw-medium fs-7">Marque *</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Marque</option>
+                                            <option value="Mercedes">Mercedes</option>
+                                            <option value="Seat">Seat</option>
+                                            <option value="Audi">Audi</option>
+                                            <option value="Peugeot">Peugeot</option>
+                                            <option value="Nissan">Nissan</option>
+                                            <option value="Renault">Renault</option>
+                                            <option value="Dodge">Dodge</option>
+                                            <option value="Opel">Opel</option>
+                                            <option value="Citroen">Citroen</option>
+                                        </select>
+                                        <span class="d-none mt-1 fs-7 text-danger">
+                                            Marque requise
+                                        </span>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label class="form-label fw-medium fs-7">Modele *</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Model</option>
+                                            <option value="Mercedes">Mercedes</option>
+                                            <option value="Seat">Seat</option>
+                                            <option value="Audi">Audi</option>
+                                            <option value="Peugeot">Peugeot</option>
+                                        </select>
+                                        <span class="d-none mt-1 fs-7 text-danger">
+                                            Modele requis
+                                        </span>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="colorInput" class="form-label fw-medium fs-7">Couleur *</label>
+                                        <input placeholder="Couleur" type="text" class="form-control" id="colorInput">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="yearInput" class="form-label fw-medium fs-7">Annee *</label>
+                                        <input placeholder="Annee" type="number" class="form-control" id="yearInput">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="mileageInput" class="form-label fw-medium fs-7">Kilometrage
+                                            *</label>
+                                        <input placeholder="Kilometrage" type="number" class="form-control"
+                                            id="mileageInput">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label class="form-label fw-medium fs-7">Carburant *</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected value="Essence">Essence</option>
+                                            <option value="GPL">GPL</option>
+                                            <option value="Diesel">Diesel</option>
+                                            <option value="Hybride">Hybride (GPL/Essence)</option>
+                                            <option value="Electrique">Electrique</option>
+                                        </select>
+                                        <span class="d-none mt-1 fs-7 text-danger">
+                                            Carburant requis
+                                        </span>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label class="form-label fw-medium fs-7">Moteur *</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Moteur</option>
+                                            <option value="1.4L">1.4L</option>
+                                            <option value="1.5L">1.5L</option>
+                                            <option value="1.6L">1.6L</option>
+                                            <option value="1.8L">1.8L</option>
+                                            <option value="2L">2L</option>
+                                            <option value="2.4L">2.4L</option>
+                                            <option value="2.5L">2.5L</option>
+                                            <option value="3.5L">3.5L</option>
+                                        </select>
+                                        <span class="d-none mt-1 fs-7 text-danger">
+                                            Moteur requis
+                                        </span>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label class="form-label fw-medium fs-7">Boite vitesse *</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected value="Manuelle">Manuelle</option>
+                                            <option value="Semi Automatique">Semi Automatique</option>
+                                            <option value="Automatique">Automatique</option>
+                                            <option value="Hybride">Hybride</option>
+                                        </select>
+                                        <span class="d-none mt-1 fs-7 text-danger">
+                                            Boite vitesse requise
+                                        </span>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="descriptionInput" class="form-label fw-medium fs-7">Description
+                                            *</label>
+                                        <textarea placeholder="Description" class="form-control" id="descriptionInput"
+                                            rows="2"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card my-3 rounded-lg shadow-sm">
+                            <div class="card-body">
+                                <h6 class="fw-semibold">Photo / Video</h6>
+                                <div>
+                                    <div class="media-preview mt-3">
+                                        <h6 class="fs-7">3 Photos (7.6MB)</h6>
+                                        <div class="media">
+                                            <img src="data:image/jpeg;base64,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"
+                                                class="pb-1 rounded-lg" alt="..." />
+                                            <img src="https://carurac.com/newimage/small/2003-206-facelift-2003-peugeot.jpg"
+                                                class="pb-1 rounded-lg" alt="..." />
+                                            <img src="data:image/jpeg;base64,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"
+                                                class="pb-1 rounded-lg" alt="..." />
+                                        </div>
+                                    </div>
+                                    <div class="dropzone mb-2 d-flex justify-content-center bg-accent-15 rounded-lg p-5"
+                                        style="border: 1px rgba(0, 0, 0, .25) dashed;">
+
+                                        <label class="position-relative btn btn-cta btn-accent px-3 px-sm-4">
+                                            <input id="mediaInput" onchange="preview(event)"
+                                                style="cursor: pointer; top: 0; left: 0"
+                                                class="position-absolute opacity-0 w-100 h-100" type="file" multiple>
+                                            <script>
+                                                function preview(event) {
+                                                    if (event.target.files.length > 0) {
+                                                        let mediaElement = document.querySelector('.media-preview .media');
+                                                        let filesSize = 0;
+                                                        mediaElement.innerHTML = '';
+                                                        console.log(event.target.files);
+                                                        for (let file of event.target.files) {
+                                                            let reader = new FileReader();
+                                                            reader.onload = () => {
+                                                                let img = document.createElement('img');
+                                                                img.src = reader.result;
+                                                                img.setAttribute('class', 'rounded-lg pb-1 pe-1')
+                                                                mediaElement.appendChild(img);
+                                                                filesSize += file.size
+                                                                console.log(filesSize)
+                                                            }
+                                                            reader.onloadend = () => {
+                                                                function bytesToSize(bytes) {
+                                                                    var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+                                                                    if (bytes == 0) return '0 Byte';
+                                                                    var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+                                                                    return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
+                                                                }
+                                                                document.querySelector('.media-preview h6').innerHTML = `${event.target.files.length} Photo(s) (${bytesToSize(filesSize)})`
+                                                            }
+                                                            reader.readAsDataURL(file)
+                                                        }
+                                                    }
+                                                }
+                                            </script>
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                                class="iconify iconify--majesticons" width="20" height="20"
+                                                preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                <g fill="none">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M6.913 7.029C7.751 5.772 9.626 4 12.5 4c2.13 0 3.65 1.08 4.607 2.33a7.133 7.133 0 0 1 1.285 2.745c.785.127 1.695.43 2.505 1.014C22.092 10.948 23 12.373 23 14.5c0 2.126-.908 3.551-2.103 4.412C19.753 19.735 18.41 20 17.5 20H13v-6.586l1.293 1.293a1 1 0 0 0 1.414-1.414l-3-3a1 1 0 0 0-1.414 0l-3 3a1 1 0 1 0 1.414 1.414L11 13.414V20H7.5c-1.077 0-2.67-.315-4.022-1.288C2.075 17.701 1 16.026 1 13.5s1.075-4.201 2.478-5.212c1.124-.809 2.413-1.163 3.435-1.26z"
+                                                        fill="currentColor"></path>
+                                                </g>
+                                            </svg>
+                                            <span class="ps-2">
+                                                Importer Photo/Video
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <span class="text-muted fs-9">
+                                        The maximum photo size is 8 MB. Formats: jpeg, jpg, png. Put the main picture
+                                        first. The maximum video size is 10 MB.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card my-3 rounded-lg shadow-sm">
+                            <div class="card-body">
+                                <h6 class="fw-semibold">Localisation & Contact</h6>
+                                <div class="p-md-5 py-3">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label fw-medium fs-7">Wilaya *</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Wilaya</option>
+                                            <option value="Sidi Bel Abbes">Sidi Bel Abbes</option>
+                                            <option value="Oran">Oran</option>
+                                            <option value="Alger">Alger</option>
+                                        </select>
+                                        <span class="d-none mt-1 fs-7 text-danger">
+                                            Wilaya requise
+                                        </span>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label class="form-label fw-medium fs-7">Daira *</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Daira</option>
+                                            <option value="Sidi Bel Abbes">Sidi Bel Abbes</option>
+                                            <option value="Oran">Oran</option>
+                                            <option value="Alger">Alger</option>
+                                        </select>
+                                        <span class="d-none mt-1 fs-7 text-danger">
+                                            Daira requise
+                                        </span>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label class="form-label fw-medium fs-7">Commune *</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Commune</option>
+                                            <option value="Sidi Bel Abbes">Sidi Bel Abbes</option>
+                                            <option value="Oran">Oran</option>
+                                            <option value="Alger">Alger</option>
+                                        </select>
+                                        <span class="d-none mt-1 fs-7 text-danger">
+                                            Commune requise
+                                        </span>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="addressInput" class="form-label fw-medium fs-7">Adresse *</label>
+                                        <input placeholder="Adresse" type="text" class="form-control" id="addressInput">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="zipcodeInput" class="form-label fw-medium fs-7">Code ZIP *</label>
+                                        <input placeholder="Code ZIP, e.g. 42000" type="number" class="form-control"
+                                            id="zipcodeInput">
+                                    </div>
+                                    <!-- MAPBOX HERE -->
+                                    <div class="mb-3">
+                                        <img src="https://www.programmableweb.com/sites/default/files/Switch-from-Google-Maps-to-Mapbox-02-adding-a-marker.jpg"
+                                            class="d-block w-100 rounded-lg" alt="..." />
+                                    </div>
+                                    <div class="row align-items-start mt-5">
+                                        <label for="phonenumberInput" class="form-label">Numero de Tel.</label>
+                                        <div class="col-lg-9">
+                                            <div class="accordion simple-accordion" id="phonenumberAccordion">
+                                                <div class="accordion-item">
+                                                    <div class="d-flex justify-content-between">
+                                                        <span class="fs-7 fw-semibold">07 78 22 36 32</span>
+                                                        <button class="btn fw-semibold text-accent" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                            aria-expanded="true" aria-controls="collapseOne">
+                                                            Changer
+                                                        </button>
+                                                    </div>
+                                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                                        aria-labelledby="headingOne"
+                                                        data-bs-parent="#phonenumberAccordion">
+                                                        <div class="accordion-body mt-3 p-0">
+                                                            <input placeholder="Numero de Tel." type="text"
+                                                                class="form-control" id="phonenumberInput">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-sm-row justify-content-between py-3">
+                            <button type="button" class="btn btn-cta btn-link mb-1 mb-sm-0" data-bs-toggle="modal"
+                                data-bs-target="#previewModal">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    aria-hidden="true" role="img" class="iconify iconify--mdi" width="18" height="18"
+                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 9a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5a5 5 0 0 1 5-5a5 5 0 0 1 5 5a5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z"
+                                        fill="currentColor"></path>
+                                </svg>
+                                <span class="ms-1">
+                                    Aperçu
+                                </span>
+                            </button>
+                            <div class="modal fade" id="previewModal" tabindex="-1" aria-labelledby="previewModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-fullscreen">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="previewModalLabel">Aperçu</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            CONTENT HERE FROM AD.ejs template (Dynamically populate elements according
+                                            to the form fields)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column flex-sm-row">
+                                <button type="submit" class="btn btn-cta btn-link mb-1 mb-sm-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        aria-hidden="true" role="img" class="iconify iconify--ic" width="18" height="18"
+                                        preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                        <path
+                                            d="M19 12v7H5v-7H3v9h18v-9h-2zm-6 .67l2.59-2.58L17 11.5l-5 5l-5-5l1.41-1.41L11 12.67V3h2v9.67z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                    <span class="ms-2">
+                                        Sauvegarder seulement
+                                    </span>
+                                </button>
+                                <button type="submit" class="btn btn-cta btn-accent">Publier</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- PROGRESS -->
+                <div class="progress-container mb-3 mb-lg-0 p-0 ps-lg-3 col-lg-4 order-1 order-lg-2">
+                    <div class="form-progress card rounded-lg shadow-sm p-3">
+                        <span class="fs-6">55% du formulaire est complet</span>
+                        <div class="progress mt-1">
+                            <div class="progress-bar bg-accent" role="progressbar" style="width: 55%" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="d-flex flex-column mt-3">
+                            <div class="d-flex align-items-center fs-6 text-muted">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    aria-hidden="true" role="img" class="iconify iconify--mdi" width="20" height="20"
+                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                    <path d="M21 7L9 19l-5.5-5.5l1.41-1.41L9 16.17L19.59 5.59L21 7z"
+                                        fill="currentColor"></path>
+                                </svg>
+                                <span class="ms-1">
+                                    Informations Generales
+                                </span>
+                            </div>
+                            <div class="d-flex align-items-center fs-6 text-accent">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    aria-hidden="true" role="img" class="iconify iconify--mdi" width="20" height="20"
+                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                    <path d="M21 7L9 19l-5.5-5.5l1.41-1.41L9 16.17L19.59 5.59L21 7z"
+                                        fill="currentColor"></path>
+                                </svg>
+                                <span class="ms-1">
+                                    Specifications du Vehicle
+                                </span>
+                            </div>
+                            <div class="d-flex align-items-center fs-6 text-muted">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    aria-hidden="true" role="img" class="iconify iconify--mdi" width="20" height="20"
+                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                    <path d="M21 7L9 19l-5.5-5.5l1.41-1.41L9 16.17L19.59 5.59L21 7z"
+                                        fill="currentColor"></path>
+                                </svg>
+                                <span class="ms-1">
+                                    Photo / Video
+                                </span>
+                            </div>
+                            <div class="d-flex align-items-center fs-6 text-accent">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    aria-hidden="true" role="img" class="iconify iconify--mdi" width="20" height="20"
+                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                    <path d="M21 7L9 19l-5.5-5.5l1.41-1.41L9 16.17L19.59 5.59L21 7z"
+                                        fill="currentColor"></path>
+                                </svg>
+                                <span class="ms-1">
+                                    Localisation & Contact
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%- include('../../components/footer'); -%>
+            <%- include('../base/base-tail'); -%>
